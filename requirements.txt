@@ -1,0 +1,21 @@
+# Core LLM + Vector Search
+openai>=1.10.0
+langchain>=0.1.15
+langchain-redis>=0.2.0
+redis>=5.0.0
+python-dotenv>=1.0.0
+tiktoken>=0.9.0
+
+# Web scraping
+beautifulsoup4>=4.12.2
+requests>=2.31.0
+
+# Optional: UI + API interface
+gradio>=4.15.0
+fastapi>=0.110.0
+uvicorn>=0.27.1
+
+# Optional: Reranking + Eval
+cohere>=4.40          # Optional reranker
+ragas>=0.1.4
+datasets>=2.17.0

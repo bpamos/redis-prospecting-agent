@@ -1,0 +1,49 @@
+[project]
+name = "redis-prospecting-agent"
+version = "0.1.0"
+description = "Redis-powered agentic workflow to prospect company websites and recommend Redis use cases"
+authors = [
+  { name = "Brandon Amos" }
+]
+readme = "README.md"
+requires-python = ">=3.10,<3.13"
+keywords = ["redis", "langchain", "vector search", "RAG", "openai", "prospecting", "semantic routing"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11"
+]
+
+dependencies = [
+  "openai>=1.10.0",
+  "redis>=5.0.0",
+  "redisvl[langchain]>=0.6.0",
+  "langchain>=0.1.15",
+  "python-dotenv>=1.0.0",
+  "beautifulsoup4>=4.12.2",
+  "requests>=2.31.0",
+  "gradio>=4.15.0",
+  "ragas>=0.1.4",
+  "datasets>=2.17.0"
+]
+
+[project.optional-dependencies]
+dev = [
+  "mypy>=1.8.0",
+  "ruff>=0.2.2"
+]
+
+[tool.ruff]
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "W", "F", "I", "B", "C4", "UP", "ARG001"]
+ignore = ["E501", "B008", "W191", "B904"]
+
+[tool.ruff.lint.pyupgrade]
+keep-runtime-typing = true
+
+[project.urls]
+Repository = "https://github.com/your-org/redis-prospecting-agent"
+Issues = "https://github.com/your-org/redis-prospecting-agent/issues"
